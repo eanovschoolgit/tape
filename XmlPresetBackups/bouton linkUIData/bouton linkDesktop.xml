@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentProperties DeviceType="Desktop">
+  <Component type="ScriptSlider" id="Knob1" x="66" y="30" macroControl="Macro 1"
+             max="128"/>
+  <Component type="ScriptSlider" id="Knob2" x="253" y="30" macroControl="Macro 2"
+             max="128"/>
+  <Component type="ScriptSlider" id="Knob3" x="194" y="250" middlePosition="63"
+             max="127"/>
+</ContentProperties>
