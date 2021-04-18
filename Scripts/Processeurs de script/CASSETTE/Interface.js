@@ -6,7 +6,6 @@ const var Panel1 = Content.getComponent("Panel1");
 const var Panel2 = Content.getComponent("Panel2");
 
 Panel1.loadImage("{PROJECT_FOLDER}roue2.png", "test");
-Panel2.loadImage("{PROJECT_FOLDER}roue2.png", "test");
 
 Panel1.setPaintRoutine(function(g){
     g.rotate(Math.toRadians(angle), [this.get("width")/2, this.get("height")/2]);
@@ -24,10 +23,7 @@ Panel1.setTimerCallback(function(){
     this.repaint();
 });
 
-Panel2.setTimerCallback(function(){
-    angle = (angle + 1) % 360;
-    Console.print(angle);
-    this.repaint();
+
 });
 
 Panel1.startTimer(15);
@@ -88,8 +84,6 @@ Content.getComponent("Button1").setControlCallback(onButton1Control);
 const var Knob1 = Content.getComponent("Knob1");
 const var Knob3 = Content.getComponent("Knob3");
 const var Knob4 = Content.getComponent("Knob4");
-const var Knob5 = Content.getComponent("Knob5");
-
 const var Knob9 = Content.getComponent("Knob9");
 const var Knob10 = Content.getComponent("Knob10");
 
@@ -113,19 +107,7 @@ inline function onButton2Control(component, value)
 	Knob10.setValue(0);
     
     
-    
-    
-    
-    
-	Knob1.changed();
-	Knob2.changed();
-	Knob3.changed();
-	Knob4.changed();
-	Knob5.changed();
-	Knob9.changed();
-	Knob10.changed();
 	
-};
 
 Content.getComponent("Button2").setControlCallback(onButton2Control);
 
@@ -160,9 +142,7 @@ Content.getComponent("Knob8").setControlCallback(onKnob8Control);
 
 const var Knob7 = Content.getComponent("Knob7");
 
-inline function onKnob7Control(component, value)
-{
-	ShapeFX1.setAttribute(ShapeFX1.Mix, value);
+inline function onKnob7Control(component, value
 	
 };
 
@@ -172,7 +152,6 @@ Content.getComponent("Knob7").setControlCallback(onKnob7Control);
 // delay 1 mix //
 
 
-inline function onKnob3Control(component, value)
 {
 	Delay1.setAttribute(Delay1.Mix, value);
 };
@@ -211,10 +190,6 @@ Content.getComponent("Knob6").setControlCallback(onKnob6Control);
 inline function onKnob5Control(component, value)
 {
 	Knob6.setValue (Knob6.get ("max") * value);
-	Knob6.changed();
-	Knob7.setValue(value);
-	Knob7.changed();
-};
 
 Content.getComponent("Knob5").setControlCallback(onKnob5Control);
 
@@ -222,21 +197,7 @@ Content.getComponent("Knob5").setControlCallback(onKnob5Control);
 function onNoteOn()
 {
 	
-}
- function onNoteOff()
-{
-	
-}
- function onController()
-{
-	
-}
- function onTimer()
-{
-	
-}
- function onControl(number, value)
-{
+
 	
 }
  
